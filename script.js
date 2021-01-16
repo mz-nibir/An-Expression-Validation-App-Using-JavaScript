@@ -28,14 +28,48 @@ alert(text);
 });
 
 phone.addEventListener("click",(e) => {
-    console.log("phone click");
+    let phone_re = /^([01]|\+88)?\d{11}/;
+    choice = prompt("Enter Your Phone Number: ");
+
+
+let post = choice.match(phone_re);
+
+    var text;
+if(post){
+    text = "Phone Number is Valid!";
+    
+}else{
+    text = "Phone Number is not Valid!";
+    
+}
+
+alert(text);
+
+    e.preventDefault();
 
 
 });
 
 
 postal.addEventListener("click",(e) => {
-    console.log("postal click");
+    let post_re = /^[0-9]{4}$/;
+    choice = prompt("Enter Your PostCode: ");
+
+
+let post = choice.match(post_re);
+
+    var text;
+if(post){
+    text = "Post Code is Valid!";
+    
+}else{
+    text = "Post Code is not Valid!";
+    
+}
+
+alert(text);
+
+    e.preventDefault();
 
 
 });
