@@ -5,7 +5,7 @@ let postal = document.querySelector("#postal");
 
 //define EventListener
 email.addEventListener("click",(e) => {
-    let email_re = /^([a-zA-Z0-9].?)+[^.]@([a-zA-Z0-9].?)+[^.]$/ ;
+    let email_re = /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/ ;
     choice = prompt("Enter Your Email: ");
 
 
